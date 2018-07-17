@@ -54,15 +54,11 @@ abbr        do |var| ... end
 
 snippet     block
 abbr        { ... }
-  {
-    ${0:TARGET}
-  }
+  { ${0:TARGET} } ${1}
 
 snippet     blockvar
 abbr        {|var| ... }
-  {|${1:#:var}|
-    ${0:TARGET}
-  }
+  { |${1:#:var}| ${0:TARGET} } ${2}
 
 snippet     fileopen
 alias       open
