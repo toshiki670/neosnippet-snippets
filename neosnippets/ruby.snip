@@ -11,14 +11,6 @@ abbr        if ... end
     ${0:TARGET}
   end
 
-snippet     if
-abbr        if ... elsif ... end
-  if ${1:#:condition}
-    ${0:TARGET}
-  elsif ${2:#:condition}
-    ${0:TARGET}
-  end
-
 snippet     unless
 abbr        unless ... end
   unless ${1:#:condition}
@@ -54,10 +46,22 @@ abbr        do |var| ... end
 
 snippet     block
 abbr        { ... }
-  { ${1:TARGET} } ${0}
+  {
+    ${1:TARGET}
+  }${0}
 
 snippet     blockvar
 abbr        {|var| ... }
+  { |${1:#:var}|
+    ${2:TARGET}
+  }${0}
+
+snippet     block
+abbr        { ... } (Oneline)
+  { ${1:TARGET} } ${0}
+
+snippet     blockvar
+abbr        {|var| ... } (Oneline)
   { |${1:#:var}| ${2:TARGET} } ${0}
 
 snippet     fileopen
