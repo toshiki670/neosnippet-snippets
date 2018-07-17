@@ -13,10 +13,10 @@ abbr        if ... end
 
 snippet     if
 abbr        if ... elsif ... end
-  if ${2:#:condition}
+  if ${1:#:condition}
     ${0:TARGET}
-  elsif ${3:#:condition}
-    ${1:TARGET}
+  elsif ${2:#:condition}
+    ${0:TARGET}
   end
 
 snippet     unless
@@ -54,11 +54,11 @@ abbr        do |var| ... end
 
 snippet     block
 abbr        { ... }
-  { ${0:TARGET} } ${1}
+  { ${1:TARGET} } ${0}
 
 snippet     blockvar
 abbr        {|var| ... }
-  { |${1:#:var}| ${0:TARGET} } ${2}
+  { |${1:#:var}| ${2:TARGET} } ${0}
 
 snippet     fileopen
 alias       open
