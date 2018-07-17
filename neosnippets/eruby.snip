@@ -23,3 +23,15 @@ abbr        <%# %>
 options     word
     <%# ${1:TARGET} %>${2}
 
+snippet     if
+abbr        <% if %> <% end %>
+options     head
+    <% if ${1:#:condition} %>
+      ${0:TARGET}
+    <% end %>
+
+snippet     link_to
+abbr        link_to helper
+options     head
+    <%= link_to ${0:#:Link_title} %>
+

@@ -11,6 +11,14 @@ abbr        if ... end
     ${0:TARGET}
   end
 
+snippet     if
+abbr        if ... elsif ... end
+  if ${2:#:condition}
+    ${0:TARGET}
+  elsif ${3:#:condition}
+    ${1:TARGET}
+  end
+
 snippet     unless
 abbr        unless ... end
   unless ${1:#:condition}
