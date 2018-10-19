@@ -129,6 +129,12 @@ snippet map
 options word
   map {|${1:#:variable}| ${0} }
 
+snippet map_do
+options word
+  map do |${1:#:variable}|
+    ${0}
+  end
+
 snippet sort
 options word
   sort {|${1:x}, ${2:y}| ${0} }

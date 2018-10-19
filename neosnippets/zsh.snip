@@ -4,3 +4,10 @@ snippet     zplug
 abbr zplug "plugin"
         zplug "`getreg('+')=='' ? '<\`0\`>' : getreg('+')`"${0}
 
+
+snippet     if
+options     head
+abbr        if []; then fi
+  if [ ${1:#:condition} ]; then
+    ${0:TARGET}
+  fi
