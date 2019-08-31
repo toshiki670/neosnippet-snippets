@@ -7,7 +7,7 @@ options head
 
 
 snippet if
-	if [ ${1:#:condition} ]; then
+	if [[ ${1:#:condition} ]]; then
 		${0:TARGET}
 	fi
 
@@ -18,7 +18,7 @@ snippet el
 
 
 snippet elif
-	elif [ ${1:#:condition} ]; then
+	elif [[ ${1:#:condition} ]]; then
 		${0:TARGET}
 
 
