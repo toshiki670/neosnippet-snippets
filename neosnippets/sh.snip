@@ -94,4 +94,14 @@ options     head
 	echo "${0:TARGET}" 1>&2
 	exit 1
 
+snippet check_cmd
+# Check installed the required shell.
+	if ! type "${1:cmd}" > /dev/null 2>&1; then
+	fi
+
+snippet check_root
+  if [[ $EUID -ne 0 ]]; then
+  fi
+
+
 # vim: set noexpandtab :
