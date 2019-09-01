@@ -1,8 +1,8 @@
-snippet #!
-abbr    #!/bin/sh
-alias   shebang
+snippet sh
+abbr    #!/bin/bash
+alias   #!
 options head
-	#!/bin/${1:sh}
+	#!/bin/bash
 	${0}
 
 
@@ -59,8 +59,7 @@ snippet tmp
 
 snippet function
 alias func
-	${1:#:name}()
-	{
+	${1:#:name}() {
 		${0:TARGET}
 	}
 
