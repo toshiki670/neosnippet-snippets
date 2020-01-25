@@ -103,5 +103,9 @@ snippet check_root
   if [[ $EUID -ne 0 ]]; then
   fi
 
+snippet error
+  echo "${0##*/}: ${1:message}." >&1
+	${0:TARGET}
+
 
 # vim: set noexpandtab :
