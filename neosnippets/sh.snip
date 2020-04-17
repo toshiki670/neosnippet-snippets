@@ -96,7 +96,7 @@ options     head
 
 snippet check_cmd
 # Check installed the required shell.
-	if ! type "${1:cmd}" > /dev/null 2>&1; then
+	if ! type '${1:cmd}' > /dev/null 2>&1; then
 	fi
 
 snippet check_root
